@@ -12,7 +12,7 @@ However, due to numerous attempts to contact the author for fixes, and the fact 
  dated on Mar-2012 with no answer whatsoever), we decided to fork and release the plugin with our modifications.
 
 
-What We're planning to support:
+What we're planning to support:
 - Charts
 - Exports as Yii native controller actions.
 
