@@ -3,9 +3,16 @@ Yii-Highcharts
 
 What is Yii-Highcharts?
 --------------
-Yii-Highcharts is an extension to include charts, OOP-style, PHP, in your YII applications.
+Yii-Highcharts is an extension to include charts, OOP-style, PHP, in your YII applications. With Batik exporting !
 
-What I'm planning to support:
+Disclaimer:
+This plugin was originally created by Milo Schuman and is available @ https://code.google.com/p/yii-highcharts/
+
+However, due to numerous attempts to contact the author for fixes, and the fact that the project seems staled (a bug
+ dated on Mar-2012 with no answer whatsoever), we decided to fork and release the plugin with our modifications.
+
+
+What We're planning to support:
 - Charts
 - Exports as Yii native controller actions.
 
