@@ -134,6 +134,12 @@ class HighchartsWidget extends CWidget
 	    $scriptFile = YII_DEBUG ? 'exporting.src.js' : 'exporting.js';
 	    $cs->registerScriptFile("$baseUrl/modules/$scriptFile");
 	}
+        
+        if ($this->options['gradient']['enabled']){
+            $scriptFile = "gradientFill.js";
+            $cs->registerScriptFile("$baseUrl/$scriptFile");
+        }
+        
 	# $cs->registerScript($id, $embeddedScript);
 	// register global theme if specified vie the 'theme' option
 	if (isset($this->options['theme']))

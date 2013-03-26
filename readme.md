@@ -12,6 +12,25 @@ What I'm planning to support:
 
 Current Version 0.1 (2012-12-21 13:00)
 --------------
+Added support for gradient filling your charts.
+
+For this to work, you have to add an entry 'gradient' in the 'options' array of the widget declaration:
+
+```php
+
+$this->Widget('ext.highcharts.HighchartsWidget', array(
+	'options' => array(
+		'gradient' => array('enabled' => true),
+		[...]
+	)
+	[...]
+)
+
+```
+
+
+Version 0.1 (2012-12-21 13:00)
+--------------
 First Commit !
 
 This version includes the raw, functional extension used in an other project. 
