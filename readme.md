@@ -10,7 +10,7 @@ What I'm planning to support:
 - Exports as Yii native controller actions.
 
 
-Current Version 0.1 (2012-12-21 13:00)
+Current Version 0.2 (2013-03-26 07:56)
 --------------
 Added support for gradient filling your charts.
 
