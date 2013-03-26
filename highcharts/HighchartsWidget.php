@@ -2,71 +2,25 @@
 
 /**
  * HighchartsWidget class file.
+ * 
+ * Examples and documentation is provided in the example.md file. 
+ * A wiki may be available in a near future.
+ * 
+ * Original work by Milo Schuman. Due to Inactivity on his googlecode project
+ * (and failed attempts to contact him), we forked the project to add new 
+ * features.
  *
+ * Original Author : Milo Schuman
+ * Original project link : http://yii-highcharts.googlecode.com/
+ * 
  * @author Milo Schuman <miloschuman@gmail.com>
- * @link http://yii-highcharts.googlecode.com/
+ * @author Philippe Desmarais <https://github.com/UltraPhil>
+ * @author Pier-Luc Faucher <https://github.com/razwiss>
+ * @link https://github.com/UltraPhil/Yii-Highcharts
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
- * @version 0.5
+ * @version 0.2
  */
 
-/**
- * HighchartsWidget encapsulates the {@link http://www.highcharts.com/ Highcharts}
- * charting library's Chart object.
- *
- * To use this widget, you may insert the following code in a view:
- * <pre>
- * $this->Widget('ext.highcharts.HighchartsWidget', array(
- *    'options'=>array(
- *       'title' => array('text' => 'Fruit Consumption'),
- *       'xAxis' => array(
- *          'categories' => array('Apples', 'Bananas', 'Oranges')
- *       ),
- *       'yAxis' => array(
- *          'title' => array('text' => 'Fruit eaten')
- *       ),
- *       'series' => array(
- *          array('name' => 'Jane', 'data' => array(1, 0, 4)),
- *          array('name' => 'John', 'data' => array(5, 7, 3))
- *       )
- *    )
- * ));
- * </pre>
- *
- * By configuring the {@link $options} property, you may specify the options
- * that need to be passed to the Highcharts JavaScript object. Please refer to
- * the demo gallery and documentation on the {@link http://www.highcharts.com/
- * Highcharts website} for possible options.
- *
- * Alternatively, you can use a valid JSON string in place of an associative
- * array to specify options:
- *
- * <pre>
- * $this->Widget('ext.highcharts.HighchartsWidget', array(
- *    'options'=>'{
- *       "title": { "text": "Fruit Consumption" },
- *       "xAxis": {
- *          "categories": ["Apples", "Bananas", "Oranges"]
- *       },
- *       "yAxis": {
- *          "title": { "text": "Fruit eaten" }
- *       },
- *       "series": [
- *          { "name": "Jane", "data": [1, 0, 4] },
- *          { "name": "John", "data": [5, 7,3] }
- *       ]
- *    }'
- * ));
- * </pre>
- *
- * Note: You must provide a valid JSON string (e.g. double quotes) when using
- * the second option. You can quickly validate your JSON string online using
- * {@link http://jsonlint.com/ JSONLint}.
- *
- * Note: You do not need to specify the <code>chart->renderTo</code> option as
- * is shown in many of the examples on the Highcharts website. This value is
- * automatically populated with the id of the widget's container element. If you
- * wish to use a different container, feel free to specify a custom value.
- */
 class HighchartsWidget extends CWidget
 {
 
@@ -135,7 +89,7 @@ class HighchartsWidget extends CWidget
 	    $cs->registerScriptFile("$baseUrl/modules/$scriptFile");
 	}
         
-        if ($this->options['gradient']['enabled']){
+        if ( isset($this->options['gradient']) && $this->options['gradient']['enabled']){
             $scriptFile = "gradientFill.js";
             $cs->registerScriptFile("$baseUrl/$scriptFile");
         }
